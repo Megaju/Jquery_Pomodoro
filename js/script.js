@@ -1,15 +1,16 @@
 // minutes:secondes
 var m = 0;
 var s = 0;
-// state chrono
-var state = true;
 // empêcher de clicker plusieurs fois sur play
 var limitPlay = false;
+// nom de mon setInterval pour pouvoir le cibler et le mettre avec clearInterval
+var chrono;
 
-// le décompte tourne
-$("#play").click(function () {
-    if (state === true) {
-        setInterval(function () {
+// le timer
+function timer() {
+    if (limitPlay === false) {
+        limitPlay = true;
+        chrono = setInterval(function () {
             if (s == 60) {
                 s = 0;
                 m++;
@@ -23,4 +24,23 @@ $("#play").click(function () {
             s++;
         }, 100);
     }
+}
+
+// le décompte tourne
+$("#play").click(function () {
+    timer();
+});
+// pause
+$("#pause").click(function () {
+    limitPlay = false;
+    clearInterval(chrono);
+});
+// stop (reset)
+$("#stop").click(function () {
+    limitPlay = false;
+    m = 0;
+    $("#minutes").text("00");
+    s = 0;
+    $("#secondes").text("00");
+    clearInterval(chrono);
 });
