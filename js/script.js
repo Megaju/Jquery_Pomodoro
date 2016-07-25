@@ -16,7 +16,10 @@ var s = 0;
 
 // state chrono
 var state = true;
+// 
 var demandePause = false;
+// empêcher de clicker plusieurs fois sur play
+var limitPlay = false;
 
 // mettre en route le chrono
 //$("#play").click = (state = true);
@@ -26,7 +29,8 @@ var demandePause = false;
 // le décompte tourne
 $("#play").click(function () {
     if (state === true) {
-        if (demandePause === false) {
+        if (demandePause === false && limitPlay == false) {
+            limitPlay = true;
             // decompte secondes
             setInterval(function () {
                 if (s == 60) {
