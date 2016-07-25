@@ -10,11 +10,17 @@ var chrono;
 function timer() {
     if (limitPlay === false) {
         limitPlay = true;
+        $("#play").css("display", "none");
+        $("#pause").css("display", "inline-block");
         chrono = setInterval(function () {
             if (s == 60) {
                 s = 0;
                 m++;
-                $("#minutes").text(m);
+                if (m >= 10) {
+                    $("#minutes").text(m);
+                } else {
+                    $("#minutes").text("0" + m);
+                }
             }
             if (s >= 10) {
                 $("#secondes").text(s);
@@ -22,7 +28,7 @@ function timer() {
                 $("#secondes").text("0" + s);
             }
             s++;
-        }, 100);
+        }, 10);
     }
 }
 
@@ -34,6 +40,8 @@ $("#play").click(function () {
 $("#pause").click(function () {
     limitPlay = false;
     clearInterval(chrono);
+    $("#play").css("display", "inline-block");
+    $("#pause").css("display", "none");
 });
 // stop (reset)
 $("#stop").click(function () {
@@ -44,4 +52,3 @@ $("#stop").click(function () {
     $("#secondes").text("00");
     clearInterval(chrono);
 });
-

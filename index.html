@@ -14,24 +14,25 @@
         <h1>POMODORO</h1>
         <form>
             <div class="form-group">
-                <label for="task">On going : </label>
+                <label for="task">On going : <i id="ongoing">tâche en cours...</i></label>
                 <input type="text" id="task" class="form-control">
             </div>
         </form>
         <div id="controls">
             <p class="time">
             <i id="minutes">00</i>
-            <i>:</i>
+            <i> min </i>
             <i id="secondes">00</i>
+            <i> sec</i>
             </p>
-            <button type="button" id="play" class="btn btn-warning btn-lg">
+            <button type="button" id="play" class="btn btn-success btn-lg">
                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
             </button>
-            <button type="button" id="pause" class="btn btn-default btn-lg">
+            <button type="button" id="pause" class="btn btn-danger btn-lg">
                 <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
             </button>
             <button type="button" id="stop" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
             </button>
         </div>
         <h2>Done</h2>
