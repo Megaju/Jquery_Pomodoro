@@ -1,4 +1,5 @@
 body {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,20 +10,25 @@ body {
 
 .container {
     width: 400px;
-    margin-top: 30px;
     padding: 20px 40px;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.6);
     border: 3px solid rgba(255, 255, 255, 0.3);
 }
+
 h1 {
+    text-align: center;
     color: red;
-    font-size: 32px;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
     text-transform: uppercase;
 }
+
 #controls {
     text-align: center;
 }
+
 .time {
     font-weight: bold;
     font-size: 3em;

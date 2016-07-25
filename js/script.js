@@ -44,3 +44,4 @@ $("#stop").click(function () {
     $("#secondes").text("00");
     clearInterval(chrono);
 });
+
