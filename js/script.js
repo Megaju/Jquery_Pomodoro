@@ -5,6 +5,8 @@ var s = 0;
 var limitPlay = false;
 // nom de mon setInterval pour pouvoir le cibler et le mettre avec clearInterval
 var chrono;
+// tâche en cours
+var ongoing;
 
 // le timer
 function timer() {
@@ -12,6 +14,8 @@ function timer() {
         limitPlay = true;
         $("#play").css("display", "none");
         $("#pause").css("display", "inline-block");
+        ongoing = $("#task").val();
+        $("#ongoing").text(ongoing);
         chrono = setInterval(function () {
             if (s == 60) {
                 s = 0;
@@ -28,7 +32,7 @@ function timer() {
                 $("#secondes").text("0" + s);
             }
             s++;
-        }, 10);
+        }, 1000);
     }
 }
 
