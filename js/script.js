@@ -34,7 +34,10 @@ function timer() {
                 $("#secondes").text("0" + s);
             }
             if (m == 25) {
-                stopChrono();
+                $("#stop").removeClass("btn-default");
+                $("#stop").addClass("btn-success");
+                clearInterval(chrono);
+                $.notify("Valide ta tâche si elle est terminé !");
             }
             s++;
         }, 10);
@@ -53,7 +56,7 @@ function stopChrono() {
     document.getElementById('done').innerHTML = tabTask;
     $("#play").css("display", "inline-block");
     $("#pause").css("display", "none");
-    $.notify("Votre tâche est terminé !");
+    $.notify("Bravo ! Ta tâche est terminé !");
 }
 
 // le décompte tourne
@@ -69,5 +72,7 @@ $("#pause").click(function () {
 });
 // stop (reset)
 $("#stop").click(function () {
+    $("#stop").removeClass("btn-success");
+    $("#stop").addClass("btn-default");
     stopChrono();
 });
