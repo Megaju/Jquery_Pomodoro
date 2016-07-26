@@ -6,8 +6,9 @@
     <title>Pomodoro</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/master.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/themes.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,13 @@
         <source src="sound/alarm.ogg" type="audio/ogg">
         <source src="sound/alarm.mp3" type="audio/mp3">
     </audio>
-
+    
     <div class="container">
+       <div class="themes">
+           <div class="tm-girly" onclick="choiceTheme('girly')"></div>
+           <div class="tm-dark" onclick="choiceTheme('dark')"></div>
+       </div>
+       
         <h1>POMODORO</h1>
         <form>
             <div class="form-group">
