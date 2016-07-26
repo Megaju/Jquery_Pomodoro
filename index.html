@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
         </form>
         <div id="controls">
             <p class="time">
-            <i id="minutes">00</i>
-            <i> min </i>
-            <i id="secondes">00</i>
-            <i> sec</i>
+                <i id="minutes">00</i>
+                <i> min </i>
+                <i id="secondes">00</i>
+                <i> sec</i>
             </p>
             <button type="button" id="play" class="btn btn-success btn-lg">
                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
@@ -36,11 +37,12 @@
             </button>
         </div>
         <h2>Done</h2>
-        <ul id="done" class="list-group">
-            <li class="list-group-item"><s>exemple</s></li>
-            <li class="list-group-item"><s>exemple</s></li>
-            <li class="list-group-item"><s>exemple</s></li>
-        </ul>
+
+        <div class="tableTask">
+            <table id="done">
+
+            </table>
+        </div>
     </div>
     <script src="js/jquery-2.2.2.min.js"></script>
     <script src="js/script.js"></script>

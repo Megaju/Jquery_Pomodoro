@@ -7,6 +7,8 @@ var limitPlay = false;
 var chrono;
 // tâche en cours
 var ongoing;
+// pour enregistrer dans la table
+var tabTask = "";
 
 // le timer
 function timer() {
@@ -31,9 +33,24 @@ function timer() {
             } else {
                 $("#secondes").text("0" + s);
             }
+            if (m == 25) {
+                stopChrono();
+            }
             s++;
-        }, 1000);
+        }, 10);
     }
+}
+
+// fonction stop
+function stopChrono() {
+    limitPlay = false;
+    m = 0;
+    $("#minutes").text("00");
+    s = 0;
+    $("#secondes").text("00");
+    clearInterval(chrono);
+    tabTask = '<tr><td>' + ongoing + '</td></tr>' + tabTask;
+    document.getElementById('done').innerHTML = tabTask;
 }
 
 // le décompte tourne
@@ -49,10 +66,5 @@ $("#pause").click(function () {
 });
 // stop (reset)
 $("#stop").click(function () {
-    limitPlay = false;
-    m = 0;
-    $("#minutes").text("00");
-    s = 0;
-    $("#secondes").text("00");
-    clearInterval(chrono);
+    stopChrono();
 });
