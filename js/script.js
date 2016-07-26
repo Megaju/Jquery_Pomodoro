@@ -9,6 +9,9 @@ var chrono;
 var ongoing;
 // pour enregistrer dans la table
 var tabTask = "";
+// nombres de tâches finis
+var nbTask = 0;
+
 
 // le timer
 function timer() {
@@ -43,11 +46,11 @@ function timer() {
                 $("#task").prop('disabled', true);
             }
             s++;
-        }, 10);
+        }, 1000);
     }
 }
 
-// fonction stop
+// fonction stop, task fini ! ! !
 function stopChrono() {
     limitPlay = false;
     m = 0;
@@ -61,6 +64,8 @@ function stopChrono() {
     $("#pause").css("display", "none");
     $.notify("Bravo ! Ta tâche est terminé !");
     $("#task").prop('disabled', false);
+    nbTask++;
+    $(".nb-task").text(nbTask);
 }
 
 // le décompte tourne
