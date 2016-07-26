@@ -39,6 +39,9 @@ function timer() {
                 clearInterval(chrono);
                 $.notify("Valide ta tâche si elle est terminé !");
             }
+            if (s+m > 0) {
+                $("#task").prop('disabled', true);
+            }
             s++;
         }, 10);
     }
@@ -57,6 +60,7 @@ function stopChrono() {
     $("#play").css("display", "inline-block");
     $("#pause").css("display", "none");
     $.notify("Bravo ! Ta tâche est terminé !");
+    $("#task").prop('disabled', false);
 }
 
 // le décompte tourne

@@ -51,11 +51,7 @@ h1 {
 
 p.time i {
     color: #333;
-    font-size: 60px;
-}
-
-i {
-    text-shadow: 0 0 5px #333;
+    font-size: 58px;
 }
 
 label > i {
