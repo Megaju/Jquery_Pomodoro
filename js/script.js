@@ -51,6 +51,9 @@ function stopChrono() {
     clearInterval(chrono);
     tabTask = '<tr><td>' + ongoing + '</td></tr>' + tabTask;
     document.getElementById('done').innerHTML = tabTask;
+    $("#play").css("display", "inline-block");
+    $("#pause").css("display", "none");
+    $.notify("Votre tâche est terminé !");
 }
 
 // le décompte tourne
