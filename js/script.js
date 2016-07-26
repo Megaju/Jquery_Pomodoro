@@ -11,12 +11,16 @@ var ongoing;
 var tabTask = "";
 // nombres de tâches finis
 var nbTask = 0;
-
+// son d'alarme
+var alarm = $("#alarmSound");
+// on desactive le bouton stop
+$("#stop").prop('disabled', true);
 
 // le timer
 function timer() {
     if (limitPlay === false) {
         limitPlay = true;
+        $("#stop").prop('disabled', false);
         $("#play").css("display", "none");
         $("#pause").css("display", "inline-block");
         ongoing = $("#task").val();
@@ -36,13 +40,15 @@ function timer() {
             } else {
                 $("#secondes").text("0" + s);
             }
-            if (m == 25) {
+            if (s == 1) {
                 $("#stop").removeClass("btn-default");
                 $("#stop").addClass("btn-success");
                 clearInterval(chrono);
                 $.notify("Valide ta tâche si elle est terminé !");
+                //ALARM
+                playAudio();
             }
-            if (s+m > 0) {
+            if (s + m > 0) {
                 $("#task").prop('disabled', true);
             }
             s++;
@@ -84,4 +90,14 @@ $("#stop").click(function () {
     $("#stop").removeClass("btn-success");
     $("#stop").addClass("btn-default");
     stopChrono();
+    $("#stop").prop('disabled', true);
 });
+
+// sound
+function playAudio() {
+    alarm.play();
+}
+
+function pauseAudio() {
+    alarm.pause();
+}
