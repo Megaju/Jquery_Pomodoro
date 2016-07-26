@@ -12,7 +12,7 @@ var tabTask = "";
 // nombres de tâches finis
 var nbTask = 0;
 // son d'alarme
-var alarm = $("#alarmSound");
+var alarm = document.getElementById("alarmSound");
 // on desactive le bouton stop
 $("#stop").prop('disabled', true);
 
@@ -91,6 +91,7 @@ $("#stop").click(function () {
     $("#stop").addClass("btn-default");
     stopChrono();
     $("#stop").prop('disabled', true);
+    pauseAudio();
 });
 
 // sound
