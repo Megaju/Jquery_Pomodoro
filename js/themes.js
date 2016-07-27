@@ -4,14 +4,17 @@ function choiceTheme(theme) {
             "background": "#eee",
             "background-size": "cover",
             "font-family": "'Open Sans', cursive"
-        });
+        })
+        
         $(".container").css({
             "box-shadow": "0 0 180px #000",
             "border-radius": "0"
         });
+        
         $("h1").css({
             "color": "#222"
         })
+        
         $("p.time i").css({
             "font-size": "40px"
         })

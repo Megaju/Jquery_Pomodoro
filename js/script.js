@@ -40,7 +40,7 @@ function timer() {
             } else {
                 $("#secondes").text("0" + s);
             }
-            if (s == 1) {
+            if (m == 1) {
                 $("#stop").removeClass("btn-default");
                 $("#stop").addClass("btn-success");
                 clearInterval(chrono);
