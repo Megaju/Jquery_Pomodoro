@@ -44,7 +44,7 @@ function timer() {
                 $("#stop").removeClass("btn-default");
                 $("#stop").addClass("btn-success");
                 clearInterval(chrono);
-                $.notify("Valide ta tâche si elle est terminé !");
+                $.notify("Valide ta tâche si elle est terminé !", "info");
                 playAudio();
             }
             if (s + m > 0) {
@@ -67,7 +67,7 @@ function stopChrono() {
     document.getElementById('done').innerHTML = tabTask;
     $("#play").css("display", "inline-block");
     $("#pause").css("display", "none");
-    $.notify("Bravo ! Ta tâche est terminé !");
+    $.notify("Bravo ! Ta tâche est terminé !", "info");
     $("#task").prop('disabled', false);
     nbTask++;
     $(".nb-task").text(nbTask);
