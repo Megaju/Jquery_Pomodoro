@@ -193,4 +193,107 @@ function choiceTheme(theme) {
             }
         });
     }
+    if (theme === "cat") {
+        $("body").css({
+            "background-image": "url(images/bg-cat.jpg)",
+            "background-size": "cover",
+            "font-family": "'Open Sans', cursive"
+        })
+        
+        $(".container").css({
+            "box-shadow": "0 0 180px #000",
+            "border-radius": "0"
+        });
+        
+        $("h1").css({
+            "color": "#222"
+        })
+        
+        $("p.time i").css({
+            "font-size": "40px"
+        })
+        $(".btn-success").css({
+            "background-color": "#333",
+            "border": "1px solid #111"
+        })
+        $(".nb-task").css({
+            "background-color": "#333",
+            "font-size": "25px",
+            "line-height": "40px"
+        })
+        $("h6").css({
+            "color": "white"
+        })
+        // input
+        $(".form-control-plus").css({
+            "background-color": "#333",
+            "color": "#fff"
+        })
+        $(".form-control-plus").on({
+            blur: function () {
+                $(this).css({
+                    "border": "0",
+                    "box-shadow": "0 0 0 #000"
+                });
+            },
+            focus: function () {
+                $(this).css({
+                    "border": "1px solid #333",
+                    "box-shadow": "0 0 8px #333"
+                });
+            }
+        });
+    }
+    if (theme === "lama") {
+        $("body").css({
+            "background-image": "url(images/bg-lama.jpg)",
+            "background-position": "center center",
+            "background-size": "cover",
+            "font-family": "'Open Sans', cursive"
+        })
+        
+        $(".container").css({
+            "box-shadow": "0 0 180px #000",
+            "border-radius": "0"
+        });
+        
+        $("h1").css({
+            "color": "#222"
+        })
+        
+        $("p.time i").css({
+            "font-size": "40px"
+        })
+        $(".btn-success").css({
+            "background-color": "#333",
+            "border": "1px solid #111"
+        })
+        $(".nb-task").css({
+            "background-color": "#333",
+            "font-size": "25px",
+            "line-height": "40px"
+        })
+        $("h6").css({
+            "color": "white"
+        })
+        // input
+        $(".form-control-plus").css({
+            "background-color": "#333",
+            "color": "#fff"
+        })
+        $(".form-control-plus").on({
+            blur: function () {
+                $(this).css({
+                    "border": "0",
+                    "box-shadow": "0 0 0 #000"
+                });
+            },
+            focus: function () {
+                $(this).css({
+                    "border": "1px solid #333",
+                    "box-shadow": "0 0 8px #333"
+                });
+            }
+        });
+    }
 }

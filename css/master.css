@@ -177,3 +177,15 @@ td:last-child {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.tm-cat {
+    background-image: url(../images/bg-cat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tm-lama {
+    background-image: url(../images/bg-lama.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
