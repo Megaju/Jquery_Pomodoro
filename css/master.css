@@ -149,5 +149,12 @@ td:last-child {
 
 .tm-red {
     background-image: url(../images/bg.jpg);
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tm-dreamy {
+    background-image: url(../images/bg-dreamy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
