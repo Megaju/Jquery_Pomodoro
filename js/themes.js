@@ -12,7 +12,7 @@ function choiceTheme(theme) {
             "color": "rebeccapurple"
         })
         $("p.time i").css({
-            "font-size": "40px"
+            "font-size": "35px"
         })
         $(".btn-success").css({
             "background-color": "rebeccapurple",
@@ -23,10 +23,29 @@ function choiceTheme(theme) {
             "font-size": "25px",
             "line-height": "40px"
         })
+        $("h6").css({
+                "color": "white"
+            })
+        // input
+        $(".form-control-plus").on({
+            blur: function () {
+                $(this).css({
+                    "border": "0",
+                    "box-shadow": "0 0 0 #000"
+                });
+            },
+            focus: function () {
+                $(this).css({
+                    "border": "1px solid rebeccapurple",
+                    "box-shadow": "0 0 8px rebeccapurple"
+                });
+            }
+        });
     }
-    if (theme === "girly") {
+    if (theme === "red") {
         $("body").css({
-            "background": "url(images/bg.jpg) no-repeat cover",
+            "background": "url(images/bg.jpg) no-repeat",
+            "background-size": "cover",
             "font-family": "'Pacifico', cursive"
         });
         $(".container").css({
@@ -48,5 +67,23 @@ function choiceTheme(theme) {
             "font-size": "25px",
             "line-height": "40px"
         })
+        $("h6").css({
+            "color": "black"
+        })
+        // input
+        $(".form-control-plus").on({
+            blur: function () {
+                $(this).css({
+                    "border": "0",
+                    "box-shadow": "0 0 0 #000"
+                });
+            },
+            focus: function () {
+                $(this).css({
+                    "border": "1px solid green",
+                    "box-shadow": "0 0 8px green"
+                });
+            }
+        });
     }
 }

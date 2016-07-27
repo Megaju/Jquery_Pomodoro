@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'grand_hotel';
-    src: url('../fonts/grandhotel-regular-webfont.woff2') format('woff2'), url('../fonts/grandhotel-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -55,6 +48,10 @@ h1 {
 
 h2 {
     width: 100%;
+}
+
+h6 {
+    margin: 0 0 5px 0;
 }
 
 .nb-task {
@@ -113,32 +110,44 @@ td:last-child {
     font-size: 3em;
 }
 
-.form-control:focus {
-    border-color: green;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px green;
+.form-control-plus {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 10px;
+    font-size: 12px;
+    border: 0;
+    border-radius: 6px;
+    outline: 0;
+    transition: .2s;
+}
+
+.form-control-plus:focus {
+    border: 1px solid green;
+    box-shadow: 0 0 8px green;
 }
 
 .themes {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
+    font-size: 0;
 }
 
 .themes div {
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
     border: 1px solid #ccc;
-    box-shadow: 0 0 3px #333;
     cursor: pointer;
 }
 
 .tm-dark {
-    background-color: rebeccapurple;
+    background-image: url(../images/bg-dark.png);
 }
 
-.tm-girly {
+.tm-red {
     background-image: url(../images/bg.jpg);
-    background-size: 100%;
+    background-size: contain;
 }
