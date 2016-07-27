@@ -9,11 +9,13 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/themes.js"></script>
 </head>
 
 <div class="themes">
     <h6>Thèmes</h6>
+    <div class="tm-base" onclick="choiceTheme('base')"></div>
     <div class="tm-red" onclick="choiceTheme('red')"></div>
     <div class="tm-dark" onclick="choiceTheme('dark')"></div>
     <div class="tm-dreamy" onclick="choiceTheme('dreamy')"></div>
@@ -43,15 +45,19 @@
                 <i id="secondes">00</i>
                 <i> sec</i>
             </p>
-            <button type="button" id="play" class="btn btn-success btn-lg">
-                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-            </button>
-            <button type="button" id="pause" class="btn btn-danger btn-lg">
-                <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-            </button>
-            <button type="button" id="stop" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-            </button>
+
+            <div class="bloc-button">
+                <button type="button" id="play" class="btn btn-success btn-lg">
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                </button>
+                <button type="button" id="pause" class="btn btn-danger btn-lg">
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                </button>
+                <button type="button" id="stop" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                </button>
+            </div>
+
         </div>
         <h2>Done <span class="nb-task">0</span></h2>
 

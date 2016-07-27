@@ -1,4 +1,52 @@
 function choiceTheme(theme) {
+    if (theme === "base") {
+        $("body").css({
+            "background": "#eee",
+            "background-size": "cover",
+            "font-family": "'Open Sans', cursive"
+        });
+        $(".container").css({
+            "box-shadow": "0 0 180px #000",
+            "border-radius": "0"
+        });
+        $("h1").css({
+            "color": "#222"
+        })
+        $("p.time i").css({
+            "font-size": "40px"
+        })
+        $(".btn-success").css({
+            "background-color": "#333",
+            "border": "1px solid #111"
+        })
+        $(".nb-task").css({
+            "background-color": "#333",
+            "font-size": "25px",
+            "line-height": "40px"
+        })
+        $("h6").css({
+            "color": "black"
+        })
+        // input
+        $(".form-control-plus").css({
+            "background-color": "#333",
+            "color": "#fff"
+        })
+        $(".form-control-plus").on({
+            blur: function () {
+                $(this).css({
+                    "border": "0",
+                    "box-shadow": "0 0 0 #000"
+                });
+            },
+            focus: function () {
+                $(this).css({
+                    "border": "1px solid #333",
+                    "box-shadow": "0 0 8px #333"
+                });
+            }
+        });
+    }
     if (theme === "dark") {
         $("body").css({
             "background": "url(images/bg-dark.png) repeat",
@@ -27,6 +75,10 @@ function choiceTheme(theme) {
                 "color": "white"
             })
         // input
+        $(".form-control-plus").css({
+            "background-color": "#fff",
+            "color": "#333"
+        })
         $(".form-control-plus").on({
             blur: function () {
                 $(this).css({
@@ -49,28 +101,32 @@ function choiceTheme(theme) {
             "font-family": "'Pacifico', cursive"
         });
         $(".container").css({
-            "box-shadow": "0 0 180px #000",
+            "box-shadow": "0 0 180px #A79A66",
             "border-radius": "0"
         });
         $("h1").css({
             "color": "red"
         })
         $("p.time i").css({
-            "font-size": "40px"
+            "font-size": "55px"
         })
         $(".btn-success").css({
             "background-color": "green",
-            "border": "1px solid #542585"
+            "border": "1px solid green"
         })
         $(".nb-task").css({
             "background-color": "green",
-            "font-size": "25px",
-            "line-height": "40px"
+            "font-size": "32px",
+            "line-height": "32px"
         })
         $("h6").css({
             "color": "black"
         })
         // input
+        $(".form-control-plus").css({
+            "background-color": "#fff",
+            "color": "#333"
+        })
         $(".form-control-plus").on({
             blur: function () {
                 $(this).css({
@@ -115,6 +171,10 @@ function choiceTheme(theme) {
             "color": "white"
         })
         // input
+        $(".form-control-plus").css({
+            "background-color": "#fff",
+            "color": "#333"
+        })
         $(".form-control-plus").on({
             blur: function () {
                 $(this).css({

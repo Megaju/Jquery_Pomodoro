@@ -20,10 +20,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/bg.jpg);
+    background-color: #eee;
     background-size: cover;
     background-position: center center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Open Sans', cursive;
     font-size: 15px;
     transition: .2s;
 }
@@ -34,12 +34,12 @@ body {
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.6);
     border: 3px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 180px #A79A66;
+    box-shadow: 0 0 180px #000;
 }
 
 h1 {
     text-align: center;
-    color: red;
+    color: #222;
     font-size: 40px;
     font-weight: 700;
     margin: 0 0 20px 0;
@@ -59,15 +59,28 @@ h6 {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    line-height: 32px;
+    line-height: 40px;
     text-align: center;
     color: #fff;
-    background-color: green;
+    background-color: #333;
+}
+
+.bloc-button {
+    font-size: 0;
+}
+
+.bloc-button button:last-child {
+    margin-left: 5px;
+}
+
+.btn-success {
+    background-color: #333;
+    border: 1px solid #111;
 }
 
 p.time i {
     color: #333;
-    font-size: 58px;
+    font-size: 40px;
 }
 
 label > i {
@@ -118,13 +131,15 @@ td:last-child {
     font-size: 12px;
     border: 0;
     border-radius: 6px;
+    background-color: #333;
+    color: #fff;
     outline: 0;
     transition: .2s;
 }
 
 .form-control-plus:focus {
-    border: 1px solid green;
-    box-shadow: 0 0 8px green;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px #333;
 }
 
 .themes {
@@ -141,6 +156,10 @@ td:last-child {
     margin-left: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
+}
+
+.tm-base {
+    background-color: #fff;
 }
 
 .tm-dark {
